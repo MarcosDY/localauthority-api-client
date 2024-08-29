@@ -2,7 +2,7 @@ module github.com/marcosdy/apiclient
 
 go 1.20
 
-replace github.com/spiffe/spire-api-sdk => github.com/MarcosDY/spire-api-sdk v1.0.0-pre.0.20240719151356-bb46a791f8fe
+replace github.com/spiffe/spire-api-sdk => github.com/MarcosDY/spire-api-sdk v1.0.0-pre.0.20240802133758-a8822df66066
 
 require (
 	github.com/spiffe/spire-api-sdk v1.2.5-0.20230629125323-08049dbe95e6

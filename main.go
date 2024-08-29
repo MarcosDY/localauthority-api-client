@@ -124,6 +124,15 @@ func main() {
 		}
 		states["REVOKED"] = resp.RevokedAuthority
 
+	case "XUR":
+		_, err := cli.RevokeX509UpstreamAuthority(ctx, &localauthorityv1.RevokeX509UpstreamAuthorityRequest{
+			SubjectKeyId: *id,
+		})
+		if err != nil {
+			log.Fatalf("Failed to revoke authority: %v\n", err)
+		}
+		states["REVOKED"] = &localauthorityv1.AuthorityState{}
+
 	case "JG":
 		resp, err := cli.GetJWTAuthorityState(ctx, &localauthorityv1.GetJWTAuthorityStateRequest{})
 		// resp, err := cli.GetX509AuthorityState(ctx, &localauthorityv1.GetX509AuthorityStateRequest{})
