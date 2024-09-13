@@ -36,6 +36,6 @@ go run main.go -action JP
 ```
 - Prepare a new JWT authority
 ```
-go run main.go -action JP
+go run main.go -action JA
 ```
 ...
